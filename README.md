@@ -1,2 +1,2 @@
-this is the website css,html,jpg files and websit itself.
+This is the website, CSS, HTML, JPG files, and the website itself.
 
