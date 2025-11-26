@@ -1,1 +1,13 @@
 
+image {
+  max-width: 100%;
+  height: auto;
+}
+
+content {
+  max-width: 1400px;
+}
+
+margin-bottom {
+  margin-bottom: 16px !important;
+}
