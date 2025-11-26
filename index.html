@@ -1,35 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <h1>My Website</h1>
+      <p>Welcome to my page!</p>
+    </header>
 
-<link rel="stylesheet" href="index.css">
-<div class="layout">
+    <!-- Main layout: left = content, right = sidebar -->
+    <div class="layout">
 
-<div class="page-wrapper">
-  <header class="header">
-    <h1>Chekalin Debunked</h1>
-  </header>
-    <!-- Main content -->
-    <main>
-      <article class="card">
-        <img src="image.jpg" alt="">
-        <div class="card-content">
-          <h2 class="card-title">The first sighting</h2>
-          <p class="card-subtitle">April 7, 1992 — Dmitry</p>
-          <p>
-            You won't believe what I found today! I recently heard...
-          </p>
-          <a class="btn" href="Blog1.html">Read More »</a>
+      <!-- Main content area (left) -->
+      <div class="main-content">
+        <!-- Example Card: First Sighting -->
+        <div class="card">
+          <div class="card-content">
+            <h2 class="card-title">First Sighting</h2>
+            <p class="card-subtitle">Spotted in Chekalin</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae nulla in urna aliquet blandit.</p>
+          </div>
         </div>
-      </article>
 
-      <!-- Add more posts here -->
-    </main>
+        <!-- Example Card: Another Post -->
+        <div class="card">
+          <div class="card-content">
+            <h2 class="card-title">Another Post</h2>
+            <p class="card-subtitle">Subtitle goes here</p>
+            <p>Curabitur nec felis eu justo sagittis commodo. Donec ac elementum odio.</p>
+          </div>
+        </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">About Me</h3>
-        <p>Yo, wassup, people of Chekalin!  My name's Dmitry, and my goal with this blogging website is to debunk the theories, myths, and rumors of my hometown, Chekalin!</p>
-        <p>I try to upload every Friday, so stay tuned for the newest findings!</p>
+        <!-- Add more cards here -->
       </div>
-    </aside>
+
+      <!-- Sidebar (right) -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">About Me</h3>
+          <p>Yo, wassup, people of Chekalin! My name's Dmitry, and my goal is to document strange findings around my town.</p>
+          <p>I try to upload every Friday, so stay tuned for the newest findings!</p>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Links</h3>
+          <p><a href="https://www.youtube.com" class="btn">My YouTube »</a></p>
+        </div>
+      </aside>
+
+    </div>
   </div>
-</div>
+</body>
+</html>
