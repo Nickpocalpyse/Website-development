@@ -67,6 +67,7 @@ body {
   background: white;
   cursor: pointer;
   transition: 0.2s;
+  margin: 8px;
 }
 
 .btn:hover {
