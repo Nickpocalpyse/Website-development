@@ -14,8 +14,7 @@ body {
 
 
 .page-wrapper {
-  max-width: 1400px;
-  margin: auto;
+  flex: 1;
 }
 
 @media (max-width: 800px) {
@@ -110,11 +109,11 @@ body {
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 2rem;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .content .card {
@@ -126,6 +125,8 @@ body {
   top: 1rem; /* optional */
 }
 
-.about {
-  margin-bottom: 0;
+.about{
+  position: sticky;
+  top: 20px;
 }
+
