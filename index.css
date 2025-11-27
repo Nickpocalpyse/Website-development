@@ -1,8 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; 
+   margin: 0; 
+   padding: 0; 
+  }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -12,17 +11,18 @@ body {
   color: #333;
 }
 
-
 .page-wrapper {
-  max-width: 1400px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
 }
+
 
 @media (max-width: 800px) {
   .layout {
     grid-template-columns: 1fr;
   }
-  
   .sidebar {
     position: static;
   }
@@ -30,19 +30,15 @@ body {
 
 
 .card {
-  background: white;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  margin-bottom: 24px;
-  width: 100%;
-  max-width: 100%;  
-  margin: 0;
-  
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 1.5rem;
 }
 
-.card-content {
-  padding: 16px 20px;
+.content {
+  width: 100%;
 }
 
 .card-title {
@@ -56,6 +52,11 @@ body {
   margin-bottom: 12px;
 }
 
+.card img {
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+}
 
 .btn {
   display: inline-block;
@@ -111,21 +112,24 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 320px; /* change 320px to desired sidebar width */
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: start;
 }
 
-.content .card {
-  margin-bottom: 2rem;
-}
 
 .sidebar {
+  /* keep the about card visible while scrolling */
   position: sticky;
-  top: 1rem; /* optional */
+  top: 1rem;
+  height: fit-content; /* prevents weird stretching */
 }
 
 .about {
   margin-bottom: 0;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
