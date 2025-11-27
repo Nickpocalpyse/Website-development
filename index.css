@@ -13,8 +13,8 @@ body {
 }
 
 .background-pic {
-  background: "website background".jpg;
-
+  background-image: url("website background.jpg");
+}
 .page-wrapper {
   flex: 1;
 }
