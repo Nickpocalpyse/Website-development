@@ -1,20 +1,20 @@
 <link rel="stylesheet" href="index.css">
-<div class="layout">
 
 <div class="page-wrapper">
   <header class="header">
     <h1>Chekalin Debunked</h1>
   </header>
-    <!-- Main content -->
-    <main>
+
+  <!-- layout grid must directly contain main and aside -->
+  <div class="layout">
+    <!-- Main content (left column) -->
+    <main class="main-content">
       <article class="card">
         <img src="image.jpg" alt="">
         <div class="card-content">
           <h2 class="card-title">The first sighting</h2>
           <p class="card-subtitle">April 7, 1992 — Dmitry</p>
-          <p>
-            You won't believe what I found today! I recently heard...
-          </p>
+          <p>You won't believe what I found today! I recently heard...</p>
           <a class="btn" href="Blog1.html">Read More »</a>
         </div>
       </article>
@@ -22,13 +22,13 @@
       <!-- Add more posts here -->
     </main>
 
-    <!-- Sidebar -->
-    <aside>
+    <!-- Sidebar (right column) -->
+    <aside class="sidebar">
       <div class="sidebar-section">
         <h3 class="sidebar-title">About Me</h3>
-        <p>Yo, wassup, people of Chekalin!  My name's Dmitry, and my goal with this blogging website is to debunk the theories, myths, and rumors of my hometown, Chekalin!</p>
+        <p>Yo, wassup, people of Chekalin! My name's Dmitry, and my goal with this blogging website is to debunk the theories, myths, and rumors of my hometown, Chekalin!</p>
         <p>I try to upload every Friday, so stay tuned for the newest findings!</p>
       </div>
     </aside>
-  </div>
-</div>
+  </div> <!-- /.layout -->
+</div> <!-- /.page-wrapper -->
