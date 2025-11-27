@@ -137,3 +137,8 @@ body {
   top: 20px;
   width: 300px;
 }
+
+.page-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
