@@ -8,7 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   background: #f1f1f1;
   line-height: 1.6;
-  color: black;
+  color: rgb(204, 204, 204);
   background-image: url("website background.jpg"); /* or full URL */
   background-size: cover;  /* fills screen */
   background-position: center;
@@ -45,12 +45,14 @@ body {
 
 .card-title {
   font-size: 26px;
+  color: RGB(204, 204, 204);
   font-weight: bold;
 }
 
 .card-subtitle {
   opacity: 0.6;
   font-size: 15px;
+  color: rgb(204, 204, 204);
   margin-bottom: 12px;
 }
 
@@ -61,6 +63,7 @@ body {
   border: 1px solid #000;
   text-decoration: none;
   font-size: 15px;
+  color: rgb(204, 204, 204);
   background: white;
   cursor: pointer;
   transition: 0.2s;
@@ -85,6 +88,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 12px;
+  color: rgb(204, 204, 204);
 }
 
 
@@ -97,6 +101,7 @@ body {
   overflow: hidden;
   width: 100%;
   max-width: 100%;  
+  color: rgb(204, 204, 204);
 }
 
 .header h1 {
@@ -107,7 +112,7 @@ body {
 
 .header p {
   font-size: 18px;
-  color: #555;
+  color: rgb(204, 204, 204);
 }
 
 .layout {
