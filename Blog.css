@@ -149,3 +149,10 @@ body {
 .post-links a {
   display: inline-block !important;  /* <-- FIXES THE STACKING ISSUE */
 }
+
+.card-content img {
+  display: block;
+  margin: 0 auto; /* centers the image */
+  max-width: 100%; /* ensures it doesn’t overflow the card */
+  height: auto;
+}
