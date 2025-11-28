@@ -149,18 +149,3 @@ body {
 .post-links a {
   display: inline-block !important;  /* <-- FIXES THE STACKING ISSUE */
 }
-
-.post-links a.btn {
-  background: rgb(30, 30, 30); /* or your chosen color */
-  color: rgb(230, 230, 230);
-  padding: 8px 14px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.2s;
-}
-
-.post-links a.btn:hover {
-  background: rgb(50, 0, 0); /* darker on hover */
-  color: white;
-}
