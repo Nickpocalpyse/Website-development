@@ -144,13 +144,11 @@ body {
 
 .post-links {
   display: flex;
-  justify-content: center;  /* center them under the card */
-  gap: 20px;                /* space between buttons */
+  justify-content: center;
+  gap: 20px;
   margin-top: 20px;
 }
 
 .post-links a {
-  color: white;       /* or whatever you want */
-  font-size: 18px;
-  text-decoration: none;
+  display: inline-block !important;  /* <-- FIXES THE STACKING ISSUE */
 }
