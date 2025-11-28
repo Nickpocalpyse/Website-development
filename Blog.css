@@ -141,3 +141,17 @@ body {
   max-width: 800px;
   margin: auto;
 }
+
+.post-links {
+  text-align: center;   /* optional: centers the links */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;   /* <— stack downward */
+  gap: 10px;                 /* space between links */
+}
+
+.post-links a {
+  color: white;       /* or whatever you want */
+  font-size: 18px;
+  text-decoration: none;
+}
