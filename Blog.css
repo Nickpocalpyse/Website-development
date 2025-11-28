@@ -34,9 +34,9 @@ body {
   background-color: rgb(130, 36, 36);
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin: 24px auto;  /* <— THIS centers the card */
   width: 100%;
-  max-width: 50%;  
+  max-width: 50%; 
 }
 
 .card-content {
@@ -117,10 +117,9 @@ body {
 }
 
 .layout {
- display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  height: 100vh;  
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .content{
