@@ -143,11 +143,10 @@ body {
 }
 
 .post-links {
-  text-align: center;   /* optional: centers the links */
-  margin-top: 20px;
   display: flex;
-  flex-direction: column;   /* <— stack downward */
-  gap: 10px;                 /* space between links */
+  justify-content: center;  /* center them under the card */
+  gap: 20px;                /* space between buttons */
+  margin-top: 20px;
 }
 
 .post-links a {
