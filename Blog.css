@@ -37,7 +37,7 @@ body {
   margin-bottom: 24px;
   width: 100%;
   max-width: 50%;  
-  display: center;
+  align-items: center;
 }
 
 .card-content {
