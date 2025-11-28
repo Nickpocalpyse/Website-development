@@ -117,11 +117,10 @@ body {
 }
 
 .layout {
-  display: center;
-  gap: 20px;
-  align-items: flex-start;
-  max-width: 1600px;
-  margin: auto;
+ display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;  
 }
 
 .content{
