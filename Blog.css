@@ -37,10 +37,6 @@ body {
   margin-bottom: 24px;
   width: 100%;
   max-width: 50%;  
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  height: 100vh;  
 }
 
 .card-content {
