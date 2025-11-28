@@ -67,8 +67,7 @@ body {
   transition: 0.2s;
   margin: 4px;
   background: rgb(130, 36, 36);   /* same red as your cards */
-color: white;
-border: 1px solid rgb(200, 80, 80);
+  color: white;
 }
 
 .btn:hover {
