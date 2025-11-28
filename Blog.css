@@ -61,14 +61,14 @@ body {
 
 .btn {
   padding: 5px 9px;
-  border: 1px solid #000;
   text-decoration: none;
   font-size: 15px;
-  color: black;
-  background: white;
   cursor: pointer;
   transition: 0.2s;
   margin: 4px;
+  background: rgb(130, 36, 36);   /* same red as your cards */
+color: white;
+border: 1px solid rgb(200, 80, 80);
 }
 
 .btn:hover {
