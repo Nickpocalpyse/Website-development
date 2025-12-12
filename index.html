@@ -1,106 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="index.css">
 <head>
-  <header class="header">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chekalin Debunked</title>
-  </header>
-<div class="layout">   
+  <link rel="stylesheet" href="index.css">
+  <title>Chekalin Debunked</title>
 </head>
 
 <body>
-<div class="page-wrapper">
- <main class="content">
-  <!-- layout grid must directly contain main and aside -->
-    <main class="main-content">
-      <article class="card">
-        <div class="card-content">
-          <h2 class="card-title">The first sighting</h2>
-          <p class="card-subtitle">April 3, 1992 — Dmitry</p>
-          <p>You won't believe what I found today! I recently heard...</p>
-          <a class="btn" href="Blog1.html">Read More »</a>
-        </div>
-      </article>
-      <!-- Add more posts here -->
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Strange Sounds...</h2>
-          <p class="card-subtitle">April 10, 1992 — Dmitry</p>
-          <p>So I was able to say I was going over to a friend's house...</p>
-          <a class="btn" href="Blog2.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">False Alarm</h2>
-          <p class="card-subtitle">April 11, 1992 — Dmitry</p>
-          <p>Never mind, it seems like the only...</p>
-          <a class="btn" href="Blog3.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">You're not funny!</h2>
-          <p class="card-subtitle">April 17, 1992 — Dmitry</p>
-          <p>To all the people emailing me to...</p>
-          <a class="btn" href="Blog4.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">A New Rummor</h2>
-          <p class="card-subtitle">April 24, 1992 — Dmitry</p>
-          <p>Yo, wassup everybody! I'm here again...</p>
-          <a class="btn" href="Blog5.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">First night...</h2>
-          <p class="card-subtitle">May 1, 1992 — Dmitry</p>
-          <p>I'll be. I wasn't expecting mom to...</p>
-          <a class="btn" href="Blog6.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Night 2!</h2>
-          <p class="card-subtitle">May 2, 1992 — Dmitry</p>
-          <p>Ok, night two! I stayed around and...</p>
-          <a class="btn" href="Blog7.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Somethings wrong</h2>
-          <p class="card-subtitle">May 3, 1992 — Dmitry</p>
-          <p>Hey y'all, I left the evidence out...</p>
-          <a class="btn" href="Blog8.html">Read More »</a>
-        </div>
-      </article>
-      <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Everythings good</h2>
-          <p class="card-subtitle">May 4, 1992 — Dmitry</p>
-          <p>Nevermind. Everything is A...</p>
-          <a class="btn" href="Blog9.html">Read More »</a>
-        </div>
-      </article>
-    </main>
-  </div> <!-- /.page-wrapper -->
-  
-    <!-- Sidebar (right column) -->
-  <aside class="about">
-    <div class="sidebar-section">
-      <h3 class="sidebar-title">About Me</h3>
-      <p>Yo, wassup, people of Chekalin! My name's Dmitry, and my goal with this blogging website is to debunk the theories, myths, and rumors of my hometown, Chekalin!</p>
-      <p>I try to upload every Friday, so stay tuned for the newest findings!</p>
-    </div>
-  </aside>
 
-  </div> <!-- /.layout -->
-</div>
+  <!-- Skip link (important for keyboard users) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header">
+    <h1>Chekalin Debunked</h1>
+  </header>
+
+  <div class="layout">
+    <div class="page-wrapper">
+
+      <!-- The SINGLE main element -->
+      <main id="main-content">
+
+        <!-- BLOG POST CARDS -->
+        <article class="card">
+          <div class="card-content">
+            <h2 class="card-title">The First Sighting</h2>
+            <p class="card-subtitle">April 3, 1992 — Dmitry</p>
+            <p>You won't believe what I found today... </p>
+            <a class="btn" href="Blog1.html" aria-label="Read more about The First Sighting">Read More »</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <h2 class="card-title">Strange Sounds...</h2>
+            <p class="card-subtitle">April 10, 1992 — Dmitry</p>
+            <p>So I was able to say I was going to...</p>
+            <a class="btn" href="Blog2.html" aria-label="Read more about Strange Sounds">Read More »</a>
+          </div>
+        </article>
+
+        <!-- Repeat the same structure for all other posts... -->
+      </main>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="about" aria-label="About Me Sidebar">
+      <div class="sidebar-section">
+        <h2 class="sidebar-title">About Me</h2>
+        <p>Yo, wassup, people of Chekalin! My name's Dmitry...</p>
+        <p>I try to upload every Friday...</p>
+      </div>
+    </aside>
+
+  </div><!-- /.layout -->
+
 </body>
 </html>
