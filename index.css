@@ -1,3 +1,6 @@
+/* -------------------------- */
+/* RESET + GLOBAL STYLES      */
+/* -------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,34 +12,92 @@ body {
   background: #f1f1f1;
   line-height: 1.6;
   color: rgb(204, 204, 204);
-  background-image: url("website background.jpg"); /* or full URL */
-  background-size: cover;  /* fills screen */
+  background-image: url("website background.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* keeps image still while scrolling */
+  background-attachment: fixed;
 }
+
+/* Skip Navigation (ADA Requirement) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  z-index: 999;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+
+/* -------------------------- */
+/* LAYOUT                     */
+/* -------------------------- */
+.layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
 .page-wrapper {
   flex: 1;
+  max-width: 800px;
+  margin: auto;
 }
 
+/* Sidebar (About section) */
+.about {
+  position: sticky;
+  top: 20px;
+  width: 300px;
+}
+
+/* Mobile Layout */
 @media (max-width: 800px) {
   .layout {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
-  
-  .sidebar {
+  .about {
     position: static;
+    width: 100%;
   }
 }
 
+/* -------------------------- */
+/* HEADER                     */
+/* -------------------------- */
+.header {
+  text-align: center;
+  padding: 60px 0;
+  margin: 0 auto 32px;
+  background-color: rgba(130, 36, 36, 0.55);
+  border-radius: 6px;
+  width: 100%;
+  color: rgb(204, 204, 204);
+}
 
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* -------------------------- */
+/* BLOG CARDS                 */
+/* -------------------------- */
 .card {
   background-color: rgb(130, 36, 36);
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 24px;
   width: 100%;
-  max-width: 100%;  
 }
 
 .card-content {
@@ -45,18 +106,18 @@ body {
 
 .card-title {
   font-size: 26px;
-  color: RGB(204, 204, 204);
+  color: rgb(204, 204, 204);
   font-weight: bold;
 }
 
 .card-subtitle {
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 15px;
   color: rgb(204, 204, 204);
   margin-bottom: 12px;
 }
 
-
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 18px;
@@ -66,80 +127,30 @@ body {
   color: black;
   background: white;
   cursor: pointer;
-  transition: 0.2s;
-  margin: 8px;
+  transition: 0.2s ease;
+  margin-top: 10px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background: #000;
   color: white;
+  outline: 2px solid white; /* ADA focus visible */
 }
 
-
+/* -------------------------- */
+/* SIDEBAR (ABOUT)            */
+/* -------------------------- */
 .sidebar-section {
   background-color: rgb(130, 36, 36);
   padding: 20px;
-  margin-bottom: 24px;
   border-radius: 6px;
-  max-width: 100%;
-  margin: 0;
 }
 
 .sidebar-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 12px;
   color: rgb(204, 204, 204);
 }
 
-
-.header {
-  text-align: center;
-  padding: 60px 0;
-  margin: 0 auto 32px;
-  background-color: rgba(130, 36, 36, 0.55);
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;  
-  color: rgb(204, 204, 204);
-}
-
-.header h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.header p {
-  font-size: 18px;
-  color: rgb(204, 204, 204);
-}
-
-.layout {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.content{
-  margin-bottom: 2rem;
-}
-
-.sidebar {
-  position: sticky;
-  top: 1rem; /* optional */
-}
-
-.about{
-  position: sticky;
-  top: 20px;
-  width: 300px;
-}
-
-.page-wrapper {
-  max-width: 800px;
-  margin: auto;
-}
