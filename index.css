@@ -179,3 +179,9 @@ body {
     padding: 20px;
   }
 }
+
+.site-logo {
+  width: 120px;      /* Controls logo size */
+  height: auto;      /* Prevents distortion */
+  margin-bottom: 12px;
+}
