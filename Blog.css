@@ -1,3 +1,6 @@
+/* -------------------------- */
+/* RESET + BASE               */
+/* -------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,115 +10,23 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  background: #f1f1f1;
-  color: #f2f2f2;
-  background-image: URL("website backgroundAGAIN.jpg");
+  background-color: #f1f1f1;
+  color: #eaeaea;
+  background-image: url("website backgroundAGAIN.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Removed fixed attachment for accessibility */
   padding: 0 10px;
-  position: relative;
 }
 
+/* -------------------------- */
+/* LAYOUT                     */
+/* -------------------------- */
 .page-wrapper {
+  max-width: 800px;
+  margin: auto;
   flex: 1;
-}
-
-@media (max-width: 800px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-  
-  .sidebar {
-    position: static;
-  }
-}
-
-
-.card {
-  background-color: rgb(130, 36, 36);
-  border-radius: 6px;
-  overflow: hidden;
-  margin: 24px auto;  /* <— THIS centers the card */
-  width: 100%;
-  max-width: 50%; 
-}
-
-.card-content {
-  padding: 16px 20px;
-}
-
-.card-title {
-  font-size: 26px;
-  color: RGB(204, 204, 204);
-  font-weight: bold;
-  text-align: center;
-}
-
-.card-subtitle {
-  opacity: 0.6;
-  font-size: 15px;
-  color: rgb(204, 204, 204);
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-
-.btn {
-  background: rgb(62, 84, 115); /* or your chosen color */
-  color: rgb(230, 230, 230);
-  padding: 8px 14px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: rgb(50, 0, 0); /* darker on hover */
-  color: white;
-}
-
-
-.sidebar-section {
-  background-color: rgb(130, 36, 36);
-  padding: 20px;
-  margin-bottom: 24px;
-  border-radius: 6px;
-  max-width: 100%;
-  margin: 0;
-}
-
-.sidebar-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: rgb(204, 204, 204);
-}
-
-
-.header {
-  text-align: center;
-  padding: 60px 0;
-  margin: 0 auto 32px;
-  background-color: rgba(130, 36, 36, 0.55);
-  border-radius: 6px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;  
-  color: rgb(204, 204, 204);
-}
-
-.header h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.header p {
-  font-size: 18px;
-  color: rgb(204, 204, 204);
 }
 
 .layout {
@@ -124,38 +35,143 @@ body {
   gap: 2rem;
 }
 
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+  }
 
-
-.sidebar {
-  position: sticky;
-  top: 1rem; /* optional */
+  .sidebar,
+  .about {
+    position: static;
+    width: 100%;
+  }
 }
 
-.about{
+/* -------------------------- */
+/* HEADER                     */
+/* -------------------------- */
+.header {
+  text-align: center;
+  padding: 60px 0;
+  margin: 0 auto 32px;
+  background-color: rgba(130, 36, 36, 0.85);
+  border-radius: 6px;
+  width: 100%;
+  color: #f2f2f2;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.header p {
+  font-size: 18px;
+}
+
+/* -------------------------- */
+/* CARDS                      */
+/* -------------------------- */
+.card {
+  background-color: rgb(130, 36, 36);
+  border-radius: 6px;
+  margin: 24px auto;
+  width: 100%;
+  max-width: 50%;
+}
+
+.card-content {
+  padding: 16px 20px;
+}
+
+.card-title {
+  font-size: 26px;
+  color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-subtitle {
+  font-size: 15px;
+  color: #dcdcdc;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.card-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------- */
+/* BUTTONS (ADA SAFE)         */
+/* -------------------------- */
+.btn {
+  background-color: rgb(62, 84, 115);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, outline 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgb(90, 20, 20);
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* -------------------------- */
+/* SIDEBAR                    */
+/* -------------------------- */
+.sidebar {
+  position: sticky;
+  top: 1rem;
+}
+
+.about {
   position: sticky;
   top: 20px;
   width: 300px;
 }
 
-.page-wrapper {
-  max-width: 800px;
-  margin: auto;
+.sidebar-section {
+  background-color: rgb(130, 36, 36);
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 6px;
 }
 
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #f2f2f2;
+}
+
+/* -------------------------- */
+/* LINKS                      */
+/* -------------------------- */
 .post-links {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .post-links a {
-  display: inline-block !important;  /* <-- FIXES THE STACKING ISSUE */
+  display: inline-block;
 }
 
-.card-content img {
-  display: block;
-  margin: 0 auto; /* centers the image */
-  max-width: 100%; /* ensures it doesn’t overflow the card */
-  height: auto;
+/* -------------------------- */
+/* ACCESSIBILITY HELPERS      */
+/* -------------------------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
