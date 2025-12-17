@@ -34,6 +34,24 @@ body::before {
   z-index: -1;
 }
 
+/* ========================== */
+/* LOGO                       */
+/* ========================== */
+.site-logo {
+  display: block;
+  width: min(260px, 70vw);
+  height: auto;
+  margin: 0 auto 16px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
 /* -------------------------- */
 /* LAYOUT                     */
 /* -------------------------- */
@@ -99,6 +117,18 @@ body::before {
 
 .header p {
   font-size: 18px;
+}
+
+.site-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+.header-spacer {
+  width: 120px;
+  flex-shrink: 0;
 }
 
 /* -------------------------- */
