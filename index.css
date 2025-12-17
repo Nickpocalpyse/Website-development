@@ -1,25 +1,5 @@
-
 /* ========================== */
-/* LOGO                       */
-/* ========================== */
-.site-logo {
-  display: block;
-  width: min(260px, 70vw);
-  height: auto;
-  margin: 0 auto 16px;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.header h1 {
-  font-size: 40px;
-  font-weight: bold;
-}
-
-/* ========================== */
-/* ========================== */
-/* RESET + GLOBAL STYLES      */
+/* RESET + BASE               */
 /* ========================== */
 * {
   box-sizing: border-box;
@@ -27,21 +7,28 @@
   padding: 0;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  background: #f1f1f1;
   color: #f2f2f2;
-  background-image: URL("website backgroundAGAIN.jpg");
+  background-color: #f1f1f1;
+
+  background-image: url("website backgroundAGAIN.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   padding: 0 10px;
   position: relative;
 }
 
-/* Improve readability over background image */
+/* Dark overlay for readability */
 body::before {
   content: "";
   position: fixed;
@@ -63,9 +50,56 @@ body::before {
   z-index: 1000;
   border-radius: 4px;
 }
+
 .skip-link:focus {
   left: 10px;
   top: 10px;
+}
+
+/* ========================== */
+/* HEADER                     */
+/* ========================== */
+.header {
+  padding: 40px 20px;
+  margin: 0 auto 32px;
+  background-color: rgba(130, 36, 36, 0.85);
+  border-radius: 6px;
+  width: 100%;
+  color: #f2f2f2;
+}
+
+/* Flex container */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Centered title */
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+/* Logos on sides */
+.site-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Spacer if only one logo */
+.header-spacer {
+  width: 120px;
+  flex-shrink: 0;
 }
 
 /* ========================== */
@@ -93,52 +127,12 @@ body::before {
   flex-shrink: 0;
 }
 
-.header {
-  padding: 40px 20px;
-  margin: 0 auto 32px;
-  background-color: rgba(130, 36, 36, 0.85);
-  border-radius: 6px;
-  width: 100%;
-  color: #f2f2f2;
-}
-
-/* Flex container */
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Title stays centered */
-.header h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  flex: 1;
-}
-
-/* Logos on sides */
-.site-logo {
-  width: 120px;
-  height: auto;
-  flex-shrink: 0;
-}
-
-/* Spacer if only one logo */
-.header-spacer {
-  width: 120px;
-  flex-shrink: 0;
-}
 /* ========================== */
 /* CARDS                      */
 /* ========================== */
 .card {
   background-color: rgb(130, 36, 36);
   border-radius: 6px;
-  overflow: hidden;
   margin-bottom: 24px;
   width: 100%;
 }
@@ -161,33 +155,31 @@ body::before {
 }
 
 /* ========================== */
-/* BUTTONS & LINKS            */
+/* BUTTONS & LINKS (ADA)      */
 /* ========================== */
 .btn {
   display: inline-block;
   padding: 10px 18px;
-  border: 2px solid #000;
+  border-radius: 4px;
   text-decoration: none;
   font-size: 15px;
-  background: #fff;
-  color: #000;
-  cursor: pointer;
-  transition: 0.2s;
-  margin-top: 12px;
+  background-color: rgb(62, 84, 115);
+  color: #ffffff;
+  transition: background-color 0.2s ease, outline 0.2s ease;
 }
 
 .btn:hover,
 .btn:focus-visible {
-  background: #000;
-  color: #fff;
-  outline: 2px solid #fff;
+  background-color: rgb(90, 20, 20);
+  outline: 3px solid #ffffff;
   outline-offset: 2px;
 }
 
 /* Global focus visibility */
-a:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* ========================== */
@@ -234,28 +226,21 @@ a:focus-visible {
     margin-top: 20px;
   }
 
-  .card {
-    border-radius: 10px;
-  }
-
-  .card-content {
-    padding: 20px;
-  }
-  .header {
+  .header-inner {
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
   }
 
   .header h1 {
-    order: 1;
+    font-size: 36px;
   }
 
-  .site-logo {
-    order: 0;
+  .site-logo,
+  .header-spacer {
+    width: 100px;
   }
 
   .header-spacer {
     display: none;
   }
 }
-
