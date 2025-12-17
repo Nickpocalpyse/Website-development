@@ -108,8 +108,10 @@ body::before {
 /* HEADER                     */
 /* ========================== */
 .header {
-  text-align: center;
-  padding: 50px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
   margin: 0 auto 32px;
   background-color: rgba(130, 36, 36, 0.6);
   border-radius: 6px;
@@ -117,16 +119,22 @@ body::before {
 }
 
 .site-logo {
-  width: min(120px, 40vw);
+  width: 120px;
   height: auto;
-  margin-bottom: 12px;
+  flex-shrink: 0;
 }
 
 .header h1 {
+  flex: 1;
+  text-align: center;
   font-size: 40px;
   font-weight: bold;
 }
 
+.header-spacer {
+  width: 120px;
+  flex-shrink: 0;
+}
 /* ========================== */
 /* CARDS                      */
 /* ========================== */
@@ -229,14 +237,6 @@ a:focus-visible {
     margin-top: 20px;
   }
 
-  .header {
-    padding: 35px 10px;
-  }
-
-  .header h1 {
-    font-size: 32px;
-  }
-
   .card {
     border-radius: 10px;
   }
@@ -244,4 +244,21 @@ a:focus-visible {
   .card-content {
     padding: 20px;
   }
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header h1 {
+    order: 1;
+  }
+
+  .site-logo {
+    order: 0;
+  }
+
+  .header-spacer {
+    display: none;
+  }
 }
+
