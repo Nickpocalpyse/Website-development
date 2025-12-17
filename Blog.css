@@ -101,8 +101,7 @@ body::before {
 /* HEADER                     */
 /* -------------------------- */
 .header {
-  text-align: center;
-  padding: 60px 0;
+  padding: 40px 20px;
   margin: 0 auto 32px;
   background-color: rgba(130, 36, 36, 0.85);
   border-radius: 6px;
@@ -110,25 +109,54 @@ body::before {
   color: #f2f2f2;
 }
 
+/* Flex container */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title stays centered */
 .header h1 {
   font-size: 48px;
   font-weight: bold;
+  text-align: center;
+  margin: 0;
+  flex: 1;
 }
 
-.header p {
-  font-size: 18px;
-}
-
+/* Logos on sides */
 .site-logo {
   width: 120px;
   height: auto;
   flex-shrink: 0;
 }
 
-
+/* Spacer if only one logo */
 .header-spacer {
   width: 120px;
   flex-shrink: 0;
+}
+
+/* -------------------------- */
+/* MOBILE FIX                 */
+/* -------------------------- */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .site-logo,
+  .header-spacer {
+    width: 100px;
+  }
 }
 
 /* -------------------------- */
