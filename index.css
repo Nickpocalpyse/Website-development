@@ -24,7 +24,7 @@
 }
 
 .header h1 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -104,31 +104,41 @@ body::before {
   flex-shrink: 0;
 }
 
-/* ========================== */
-/* HEADER                     */
-/* ========================== */
 .header {
+  padding: 40px 20px;
+  margin: 0 auto 32px;
+  background-color: rgba(130, 36, 36, 0.85);
+  border-radius: 6px;
+  width: 100%;
+  color: #f2f2f2;
+}
+
+/* Flex container */
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
-  margin: 0 auto 32px;
-  background-color: rgba(130, 36, 36, 0.6);
-  border-radius: 6px;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Title stays centered */
+.header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  flex: 1;
+}
+
+/* Logos on sides */
 .site-logo {
   width: 120px;
   height: auto;
   flex-shrink: 0;
 }
 
-.header h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
+/* Spacer if only one logo */
 .header-spacer {
   width: 120px;
   flex-shrink: 0;
