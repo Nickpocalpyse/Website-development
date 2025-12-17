@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 /* -------------------------- */
 /* RESET + BASE               */
 /* -------------------------- */
@@ -8,15 +12,17 @@
 }
 
 body {
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background-color: #f1f1f1;
   color: #eaeaea;
+
   background-image: url("website backgroundAGAIN.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Removed fixed attachment for accessibility */
+
   padding: 0 10px;
 }
 
