@@ -1,23 +1,71 @@
-<link rel="stylesheet" href="Blog.css">
 
-<header class="header">
-  <h1>Chekalin Debunked</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chekalin Debunked – Blog</title>
+  <link rel="stylesheet" href="Blog.css">
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header class="header">
+  <div class="header-inner">
+    <img
+      src="Chekalin Debunked.jpeg"
+      alt="Chekalin Debunked website logo"
+      class="site-logo"
+    >
+
+    <h1>Chekalin Debunked</h1>
+
+    <img
+      src="Chekalin Debunked.jpeg"
+      alt="Chekalin Debunked website logo"
+      class="site-logo"
+    >
+  </div>
 </header>
 
-<div class="layout">
-  <main class="content">
-    <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Strange sounds...</h2>
-          <p class="card-subtitle">April 10, 1992 — Dmitry</p>
-          <p>So I was able to say I was going over to a friend's house!  Dad was  strangely allowing it for once...But hey, it worked out in the end!  So far, it's been mostly quiet except when I tried to sleep.  I heard scratching above me in the attic...I'm going to check it out now; wish me luck!</p>
+  <div class="layout">
+
+    <!-- Main Content -->
+    <main id="main-content" class="content" role="main">
+
+      <article class="card" aria-labelledby="post-title-1">
+        <div class="card-content">
+
+          <h2 id="post-title-1" class="card-title">
+            Strange Sounds...
+          </h2>
+
+          <p class="card-subtitle">
+            <time datetime="1992-04-04">April 10, 1992</time>
+            <span aria-hidden="true"> — </span>
+            <span class="author">Dmitry</span>
+          </p>
+
+          <p>
+            So I was able to say I was going over to a friend's house!  
+            Dad was  strangely allowing it for once...But hey, it worked out in the end!  
+            So far, it's been mostly quiet except when I tried to sleep.  
+            I heard scratching above me in the attic...I'm going to check it out now; wish me luck!
+          </p>
+
         </div>
       </article>
+
     </main>
   </div>
 
-<div class="post-links">
-  <a href="Blog1.html" class="btn">Previous</a>
-  <a href="index.html" class="btn">Home page</a>
-  <a href="Blog3.html" class="btn">Next</a>
-</div>
+  <!-- Navigation -->
+  <nav class="post-links" aria-label="Blog navigation">
+    <a href="index.html" class="btn">Home page</a>
+    <a href="Blog2.html" class="btn">Next post</a>
+  </nav>
+
+</body>
+</html>
