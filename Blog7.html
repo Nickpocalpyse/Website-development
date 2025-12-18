@@ -1,23 +1,74 @@
-<link rel="stylesheet" href="Blog.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chekalin Debunked – Blog</title>
+  <link rel="stylesheet" href="Blog.css">
+</head>
 
-<header class="header">
-  <h1>Chekalin Debunked</h1>
+<body>
+
+
+  <!-- Header -->
+  <header class="header">
+  <div class="header-inner">
+    <img
+      src="Chekalin Debunked.jpeg"
+      alt="Chekalin Debunked website logo"
+      class="site-logo"
+    >
+
+    <h1>Chekalin Debunked</h1>
+
+    <img
+      src="Chekalin Debunked.jpeg"
+      alt="Chekalin Debunked website logo"
+      class="site-logo"
+    >
+  </div>
 </header>
 
-<div class="layout">
-  <main class="content">
-    <article class="card">
-      <div class="card-content">
-        <h2 class="card-title">Night 2!</h2>
-        <p class="card-subtitle">May 2, 1992 — Dmitry</p>
-        <p>OK, night two!  I stayed around and did some searching in the underground section!  Turns out there a LOT of stuff hidden here too, about the murder!  Now I've struck gold!  I'm gonna place this in the crime scene area for them to find... discreetly...Wish me luck</p>
-        <img src="Murder room.jpg" alt="Hidden Murder room">
-      </div>
-    </article>
-  </main>
-</div>
-<div class="post-links">
-  <a href="Blog6.html" class="btn">Previous</a>
-  <a href="index.html" class="btn">Home page</a>
-  <a href="Blog8.html" class="btn">Next</a>
-</div>
+  <div class="layout">
+
+    <!-- Main Content -->
+    <main id="main-content" class="content" role="main">
+
+      <article class="card" aria-labelledby="post-title-1">
+        <div class="card-content">
+
+          <h2 id="post-title-1" class="card-title">
+            Night 2!
+          </h2>
+
+          <p class="card-subtitle">
+            <time datetime="1992-04-04">May 2, 1992</time>
+            <span aria-hidden="true"> — </span>
+            <span class="author">Dmitry</span>
+          </p>
+
+          <p>
+            OK, night two!  
+            I stayed around and did some searching in the underground section!  
+            Turns out there a LOT of stuff hidden here too, about the murder!  
+            Now I've struck gold!  
+            I'm gonna place this in the crime scene area for them to find... discreetly...Wish me luck!
+          </p>
+
+          <img src="Murder room.jpg" alt="Hidden Murder room">
+          
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="post-links" aria-label="Blog navigation">
+    <a href="Blog6.html" class="btn">Previous post</a>
+    <a href="index.html" class="btn">Home page</a>
+    <a href="Blog8.html" class="btn">Next post</a>
+  </nav>
+
+</body>
+</html>
