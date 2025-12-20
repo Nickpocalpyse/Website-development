@@ -54,28 +54,11 @@ body {
 /* -------------------------- */
 /* LAYOUT                     */
 /* -------------------------- */
-.page-wrapper {
-  max-width: 800px;
-  margin: auto;
-  flex: 1;
-}
-
 .layout {
   display: flex;
   justify-content: center;
   gap: 2rem;
-}
-
-@media (max-width: 800px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar,
-  .about {
-    position: static;
-    width: 100%;
-  }
+  flex-wrap: wrap; /* allows cards to wrap nicely on small screens */
 }
 
 
@@ -137,41 +120,21 @@ body {
   border-radius: 8px;
   margin: 24px auto;
   width: 100%;
-  max-width: 720px; /* desktop-friendly */
+  max-width: 500px; /* desktop-friendly width */
   box-sizing: border-box;
-}
-
-.card-content {
-  padding: 16px 20px;
-}
-
-.card-title {
-  font-size: 26px;
-  color: #f2f2f2;
-  font-weight: bold;
-  text-align: center;
-}
-
-.card-subtitle {
-  font-size: 15px;
-  color: #dcdcdc;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.card-content img {
-  display: block;
-  margin: 16px auto;
-  max-width: 500px;
-  max-height: 300px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  flex: 1 1 auto; /* allows shrinking if necessary */
 }
 
 @media (max-width: 700px) {
+  .layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .card {
     margin: 16px auto;
+    width: 100%;  /* full width of container */
+    max-width: 100%; /* ensures no horizontal overflow */
     border-radius: 10px;
   }
 }
