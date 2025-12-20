@@ -56,50 +56,54 @@ body::before {
   top: 10px;
 }
 
-/* ========================== */
-/* HEADER                     */
-/* ========================== */
+/* -------------------------- */
+/* HEADER (LOGOS BESIDE TITLE)*/
+/* -------------------------- */
+
 .header {
-  padding: 40px 20px;
-  margin: 0 auto 32px;
-  background-color: rgba(130, 36, 36, 0.85);
-  border-radius: 6px;
   width: 100%;
+  background-color: rgba(130, 36, 36, 0.85);
+  padding: 32px 12px;
+  margin-bottom: 32px;
+  border-radius: 6px;
   color: #f2f2f2;
+  box-sizing: border-box;
 }
 
-/* Flex container */
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 900px;
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(48px, 100px) 1fr minmax(48px, 100px);
+  align-items: center;
+  gap: 12px;
 }
 
-/* Centered title */
+/* Title */
 .header h1 {
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
   margin: 0;
-  flex: 1;
+  text-align: center;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: bold;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
-/* Logos on sides */
+/* Logos */
 .site-logo {
-  width: 120px;
+  width: 100%;
   height: auto;
-  flex-shrink: 0;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 10px;
-  border-radius: 8px;
+  justify-self: center;
 }
 
-/* Spacer if only one logo */
-.header-spacer {
-  width: 120px;
-  flex-shrink: 0;
+/* -------------------------- */
+/* MOBILE SAFETY              */
+/* -------------------------- */
+@media (max-width: 420px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 /* ========================== */
