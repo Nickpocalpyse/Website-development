@@ -294,7 +294,7 @@ html::before {
 @media (min-width: 900px) {
   .header-inner {
     grid-template-columns: auto max-content auto;
-    column-gap: 8px;
+    column-gap: 12px;
   }
 
   .site-logo {
