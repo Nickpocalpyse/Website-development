@@ -117,6 +117,7 @@ body {
 /* -------------------------- */
 /* HEADER                     */
 /* -------------------------- */
+
 .header {
   padding: 40px 20px;
   margin: 0 auto 32px;
@@ -126,53 +127,54 @@ body {
   color: #f2f2f2;
 }
 
-/* Flex container */
+/* PERFECT CENTERING */
 .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Title stays centered */
+/* Center title */
 .header h1 {
+  grid-column: 2;
+  text-align: center;
   font-size: 48px;
   font-weight: bold;
-  text-align: center;
   margin: 0;
-  flex: 1;
 }
 
-/* Logos on sides */
+/* Logos */
 .site-logo {
   width: 120px;
   height: auto;
-  flex-shrink: 0;
 }
 
-/* Spacer if only one logo */
+/* Spacer if only one logo exists */
 .header-spacer {
   width: 120px;
-  flex-shrink: 0;
 }
 
 /* -------------------------- */
-/* MOBILE FIX                 */
+/* MOBILE                     */
 /* -------------------------- */
 @media (max-width: 700px) {
   .header-inner {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 16px;
+    text-align: center;
   }
 
   .header h1 {
+    grid-column: auto;
     font-size: 36px;
   }
 
   .site-logo,
   .header-spacer {
     width: 100px;
+    margin: 0 auto;
   }
 }
 
