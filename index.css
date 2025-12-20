@@ -220,11 +220,13 @@ button:focus-visible {
     gap: 0;
   }
 
-  .about {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
-  }
+.about {
+  order: -1;         /* places it before the main content */
+  position: static;  /* remove sticky behavior */
+  width: 100%;       /* take full width */
+  margin-top: 0;     /* reset top margin */
+  margin-bottom: 20px; /* optional spacing after sidebar */
+}
 
   .header-inner {
     flex-direction: column;
