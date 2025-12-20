@@ -243,4 +243,16 @@ button:focus-visible {
   .header-spacer {
     display: none;
   }
+
+  .page-wrapper {
+  max-width: 100%;     /* allow full width */
+  margin: 0 auto;      /* center horizontally */
+  padding: 0 10px;     /* optional padding */
+}
+
+.card {
+  max-width: 500px;    /* optional, limits card width */
+  margin-left: auto; 
+  margin-right: auto;
+}
 }
