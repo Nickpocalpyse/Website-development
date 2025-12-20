@@ -94,7 +94,6 @@ body {
 }
 
 .header-inner {
-  max-width: 100%;
   margin: 0 auto;
 
   display: grid;
@@ -116,7 +115,6 @@ body {
 /* Logos */
 .site-logo {
   width: 100%;
-  max-width: 100px;
   height: auto;
   justify-self: center;
 }
@@ -128,10 +126,6 @@ body {
   .header-inner {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-
-  .site-logo {
-    max-width: 80px;
   }
 }
 
