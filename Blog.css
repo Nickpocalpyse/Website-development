@@ -51,24 +51,6 @@ body {
   flex: 1;
 }
 
-/* ========================== */
-/* LOGO                       */
-/* ========================== */
-.site-logo {
-  display: block;
-  width: min(260px, 70vw);
-  height: auto;
-  margin: 0 auto 16px;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.header h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
 /* -------------------------- */
 /* LAYOUT                     */
 /* -------------------------- */
@@ -96,23 +78,6 @@ body {
   }
 }
 
-/* ========================== */
-/* LOGO                       */
-/* ========================== */
-.site-logo {
-  display: block;
-  width: min(260px, 70vw);
-  height: auto;
-  margin: 0 auto 16px;
-  background: rgba(0, 0, 0, 0.15);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.header h1 {
-  font-size: 40px;
-  font-weight: bold;
-}
 
 /* -------------------------- */
 /* HEADER                     */
