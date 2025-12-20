@@ -243,3 +243,22 @@ button:focus-visible {
   margin-right: auto;
 }
 }
+
+/* ========================== */
+/* DESKTOP: LOGOS TIGHTER     */
+/* ========================== */
+@media (min-width: 900px) {
+  .header-inner {
+    grid-template-columns: auto max-content auto;
+  
+  }
+
+  .site-logo {
+    max-width: 90px;
+  }
+
+  .header h1 {
+    padding: 0 8px;
+  }
+}
+
