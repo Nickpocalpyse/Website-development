@@ -312,3 +312,30 @@ html::before {
     padding: 0 8px;
   }
 }
+
+/* -------------------------- */
+/* MOBILE: MAKE CARDS BIGGER  */
+/* -------------------------- */
+@media (max-width: 700px) {
+  .card {
+    padding: 20px; /* extra padding inside the box */
+    max-width: 95%; /* use more of the screen width */
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 28px; /* slightly bigger on mobile */
+  }
+
+  .card-subtitle {
+    font-size: 17px; /* slightly bigger for readability */
+  }
+
+  .card-content img {
+    max-width: 100%; /* images fill more of the card */
+    max-height: none; /* let images scale naturally */
+  }
+}
