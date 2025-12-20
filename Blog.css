@@ -3,6 +3,29 @@ body {
   width: 100%;
   min-height: 100%;
 }
+
+/* ========================== */
+/* FULL PAGE BACKGROUND FIX   */
+/* ========================== */
+
+.full-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+
+  background-image: url("website backgroundAGAIN.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.full-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 }
 /* -------------------------- */
 /* RESET + BASE               */
