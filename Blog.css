@@ -339,3 +339,23 @@ html::before {
     max-height: none; /* let images scale naturally */
   }
 }
+
+@media (max-width: 700px) {
+  .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center content horizontally */
+    text-align: center;  /* center text inside the container */
+  }
+
+  .card-title,
+  .card-subtitle {
+    width: 100%; /* ensures text wraps nicely */
+    max-width: 100%;
+  }
+
+  .card-content img {
+    margin: 16px auto; /* center image horizontally */
+  }
+}
